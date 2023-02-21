@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1>Game Random</h1>
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="#">Page Two</a></li>
+          <li class="breadcrumb-item active">2</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Escolha as Dezenas</h3>
+          </div>
+          <div class="card-body">
+            <form action="/fillgen" method="post" enctype="multipart/form-data">
+            <table class="table table-bordered">
+              <tbody>
+                {% for cont in table_listnum %}
+                <tr>
+                  <td class="td-alin"><input type="checkbox" id="customCheckbox1" name="{{cont.0}}" value="{{cont.0}}"> {{cont.0}} </td>
+                  <td class="td-alin"><input type="checkbox" id="customCheckbox1" name="{{cont.1}}" value="{{cont.1}}"> {{cont.1}} </td>
+                  <td class="td-alin"><input type="checkbox" id="customCheckbox1" name="{{cont.2}}" value="{{cont.2}}"> {{cont.2}} </td>
+                  <td class="td-alin"><input type="checkbox" id="customCheckbox1" name="{{cont.3}}" value="{{cont.3}}"> {{cont.3}} </td>
+                  <td class="td-alin"><input type="checkbox" id="customCheckbox1" name="{{cont.4}}" value="{{cont.4}}"> {{cont.4}} </td>
+                  <td class="td-alin"><input type="checkbox" id="customCheckbox1" name="{{cont.5}}" value="{{cont.5}}"> {{cont.5}} </td>
+                  <td class="td-alin"><input type="checkbox" id="customCheckbox1" name="{{cont.6}}" value="{{cont.6}}"> {{cont.6}} </td>
+                  <td class="td-alin"><input type="checkbox" id="customCheckbox1" name="{{cont.7}}" value="{{cont.7}}"> {{cont.7}} </td>
+                  <td class="td-alin"><input type="checkbox" id="customCheckbox1" name="{{cont.8}}" value="{{cont.8}}"> {{cont.8}} </td>
+                  <td class="td-alin"><input type="checkbox" id="customCheckbox1" name="{{cont.9}}" value="{{cont.9}}"> {{cont.9}} </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Escolha a Quantidade de Linhas</h3>
+                <div class="align-div">
+                  <select class="form-control" id="linha" name="linha">
+                    <option value="numero-linha">-</option>
+                    {% for read in list_cont %}
+                      <option value="{{read}}">{{read}}</option>
+                    {% endfor %}
+                  </select>
+                <div>
+                  <input type="submit" class="btn btn-info btn-flat" value="Gerar Jogos" id="alinha-button">
+                </div>
+              </div>
+            </div>
+          </form>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

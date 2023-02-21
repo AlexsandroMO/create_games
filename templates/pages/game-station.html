@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block content %}
+
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Game Random</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="/">Page One</a></li>
+            <li class="breadcrumb-item active">1</li>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card card-primary card-outline">
+          <div class="card-header">
+            <h3 class="card-title">
+              <i class="fas fa-edit"></i>
+              Ações
+            </h3>
+          </div>
+          <div class="card-body pad table-responsive">
+            <p>Quadro Atividades</p>
+            
+            <div class="card-body">
+              <p>Escolha a atividade que deseja realizar</p>
+              <a class="btn btn-app" href="/construction">
+                  <i class="fas fa-edit"></i> Editar Excel Carregado
+              </a>
+              <a class="btn btn-app" href="/list_gen">
+                  <span class="badge bg-success">Aleatórios</span>
+                  <i class="fas fa-barcode"></i> Gerar Jogos
+              </a>
+          </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    </section>
+   
+{% endblock content %}
